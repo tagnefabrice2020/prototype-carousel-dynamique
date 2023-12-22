@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #000;
+}
+
+main {
+    flex-basis: 75%;
+
+    transition-property: transform;
+    transition-duration: 600ms;
+}
+
+.image__c {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    transition-property: transform;
+}
+
+.image__c.move__left {
+    transition-timing-function: ease-in-out;
+    transition-duration: 700ms;
+    transform: translateX(-400%) !important;
+}
+
+.image__c img {
+    height: 90%;
+}
+
+.carousel-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    padding: 0rem 4rem;
+    gap: 2rem;
+}
+
+.item {
+    width: 34.375rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    gap: 2rem;
+}
+
+.item .line {
+    border-left: 1px solid #eee;
+    flex-basis: 20%;
+    flex-grow: 1;
+}
+
+aside {
+    flex-basis: 25%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: items;
+    background-color: #29516e;
+    flex-direction: column;
+    gap: 1rem;
+
+    justify-content: center;
+    align-items: start;
+    background-color: #c28159;
+
+    transition: background-color 200ms ease-in-out;
+}
+
+aside .image__carousel__container {
+    position: absolute;
+    left: -40%;
+    height: 345px;
+}
+
+.pagination {
+    margin-left: -7.5rem;
+    z-index: 111;
+    display: flex;
+    gap: 0.5rem;
+    height: fit-content;
+    top: 22rem;
+    left: 1rem;
+    border-radius: 50%;
+}
+
+i {
+    color: white;
+}
+
+.pagination div {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+
+.pagination div:hover {
+    background-color: #eee;
+    color: #000 !important
+}
+
+.pagination div:hover i {
+    color: #000;
+}
+
+* {
+    color: #fff;
+}
+
+h4,
+p,
+span {
+    font-family: 'Inter', sans-serif;
+}
+
+span {
+    font-size: 16px;
+    height: 19.2px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 3.75rem;
+    text-transform: uppercase;
+}
+
+p {
+    opacity: 0.8;
+    line-height: 24px;
+}
+
+.first__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem
+}
+
+.localization__container {
+    position: relative;
+}
+
+.localization__container img.circle {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -25%);
+}
+
+.font-bebas-neue {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url(Rectangle12.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url(Rectangle\ 3.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url(Rectangle\ 1.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.carousel-item:nth-child(4) {
+    background-image: url(Rectangle\ 41.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.carousel-item:nth-child(5) {
+    background-image: url(Rectangle\ 5.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.indicator__container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    z-index: 999;
+    height: 20px;
+    gap: 0.5rem;
+}
+
+.indicator {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.indicator span {
+    transition: transform 200ms ease-in-out;
+}
+
+.total__items {
+    width: 20px;
+}
+
+.smaller_screens {
+    display: none;
+}
+
+@media only screen and (max-width: 1080px) {
+    .container {
+        display: none;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .smaller_screens {
+        display: flex;
+        font-size: 3rem;
+        text-decoration: underline;
+        
+    }
+
+    * {
+        color: #000;
+        font-family: 'Bebas Neue',
+            sans-serif;
+    }
+}
